@@ -30,7 +30,7 @@ spec:
     spec:
       containers:
       - name: aura-js-creditscore
-        image: wcr.io/$WERCKER_APPLICATION_OWNER_NAME/$WERCKER_APPLICATION_NAME:$WERCKER_GIT_BRANCH-$WERCKER_GIT_COMMIT
+        image: $WERCKER_APPLICATION_OWNER_NAME/$WERCKER_APPLICATION_NAME:$WERCKER_GIT_BRANCH-$WERCKER_GIT_COMMIT
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 3000
