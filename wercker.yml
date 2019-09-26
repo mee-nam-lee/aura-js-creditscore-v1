@@ -63,7 +63,14 @@ deploy-app-to-oce:
     - script:
         name: "Visualise Kubernetes deployment"
         code: cat kubernetes-deployment.yml
-    
+   
+    - kubectl:
+        name: get node
+        server: $KUBERNETES_MASTER
+        token: $KUBERNETES_TOKEN
+        insecure-skip-tls-verify: true
+        command: get node
+        
     - kubectl:
         name: delete wcr secret
         server: $KUBERNETES_MASTER
